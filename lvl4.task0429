@@ -1,0 +1,38 @@
+package com.javarush.task.task04.task0429;
+
+/* 
+Положительные и отрицательные числа
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+        int a = Integer.parseInt(r.readLine());
+        int b = Integer.parseInt(r.readLine());
+        int c = Integer.parseInt(r.readLine());
+
+        int pos = 0;
+        int neg = 0;
+
+        if (a != 0)
+            if (a > 0)
+                pos = pos + 1;
+            else
+                neg = neg + 1;
+        if (b != 0)
+            if (b > 0)
+                pos = pos + 1;
+            else
+                neg = neg + 1;
+        if (c != 0)
+            if (c > 0)
+                pos = pos + 1;
+            else
+                neg = neg + 1;
+
+        System.out.println("количество отрицательных чисел: " + neg);
+        System.out.println("количество положительных чисел: " + pos);
+    }
+}
