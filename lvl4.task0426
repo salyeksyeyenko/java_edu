@@ -1,0 +1,30 @@
+package com.javarush.task.task04.task0426;
+
+/* 
+Ярлыки и числа
+*/
+
+import java.io.*;
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+        int num = Integer.parseInt(r.readLine());
+        String s1 = null;
+        String s2 = null;
+
+        if (num == 0)
+            System.out.println("ноль");
+        else {
+            if (num > 0)
+                s1 = "положительное ";
+            else
+                s1 = "отрицательное ";
+            if (num % 2 == 0)
+                s2 = "четное число";
+            else
+                s2 = "нечетное число";
+            System.out.println(s1 + s2);
+        }
+    }
+}
