@@ -1,0 +1,27 @@
+
+/* 
+Класс StringHelper
+*/
+
+public class StringHelper {
+    public static String multiply(String s) {
+        String result = "";
+        for (int i = 5; i > 0; i--) {
+            result += s;
+        }
+        return result;
+    }
+
+    public static String multiply(String s, int count) {
+        String result = "";
+        while (count > 0) {
+            result += s;
+            count--;
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+
+    }
+}
