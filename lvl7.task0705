@@ -1,7 +1,8 @@
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-/* 
+/*
 Один большой массив и два маленьких
 */
 
@@ -21,12 +22,10 @@ public class Solution {
         int a = (bigArr.length / 2);
 
         for (int i = 0; i < (smallArrOne.length + smallArrTwo.length); i++) {
-            if (i >= 0 && i < a)
+            if (i < a)
                 smallArrOne[i] = bigArr[i];
-            else if (i >= a && i < bigArr.length) {
-                int b = i - smallArrOne.length;
-                smallArrTwo[b] = bigArr[i];
-            }
+            else
+                smallArrTwo[i - smallArrTwo.length] = bigArr[i];
         }
 
         for (int i = 0; i < smallArrTwo.length; i++) {
