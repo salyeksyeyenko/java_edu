@@ -1,0 +1,48 @@
+package com.javarush.task.task07.task0713;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
+/* 
+Играем в Jолушку
+*/
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        ArrayList<Integer> bigArr = new ArrayList<>();
+        ArrayList<Integer> arrMod3 = new ArrayList<>();
+        ArrayList<Integer> arrMod2 = new ArrayList<>();
+        ArrayList<Integer> arrRest = new ArrayList<>();
+
+        BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+
+        for (int i = 0; i < 20; i++) {
+            bigArr.add(Integer.parseInt(rd.readLine()));
+        }
+
+        for (int i = 0; i < bigArr.size(); i++) {
+            if (bigArr.get(i) % 3 == 0 && bigArr.get(i) % 2 == 0) {
+                arrMod3.add(bigArr.get(i));
+                arrMod2.add(bigArr.get(i));
+            }
+            else if (bigArr.get(i) % 3 == 0)
+                arrMod3.add(bigArr.get(i));
+            else if (bigArr.get(i) % 2 == 0)
+                arrMod2.add(bigArr.get(i));
+            else arrRest.add(bigArr.get(i));
+        }
+
+        printList(arrMod3);
+        printList(arrMod2);
+        printList(arrRest);
+
+    }
+
+    public static void printList(List<Integer> list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+    }
+}
